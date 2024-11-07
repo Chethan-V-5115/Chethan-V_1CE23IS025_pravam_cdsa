@@ -1,12 +1,18 @@
 #include<stdio.h>
+void swap(int *,int *);
+
 int main()
 {
-    int m=32,n=56;
-    scanf("%d%i", &m,&n);
-    printf("Before swap m=%d n=%i",m,n);
-    m=m+n;
-    n=m-n;
-    m=m-n;
-    printf("Before swap m=%d n=%i",m,n);
+    int n1=0,n2=0;
+    scanf("%d%d",&n1,&n2);
+    printf("Before swap %d %d numbers",n1,n2);
+    swap(&n1,&n2);
+    printf("After swap %d %d numbers",n1,n2);
     return 0;
+}
+void swap (int *a ,int *b)
+{
+    int t=*a;
+    *a=*b;
+    *b=t;
 }
